@@ -76,14 +76,16 @@ $(document).ready(function(){
       $checkboxes = $('#filter-buttons input');
 
   console.log($checkboxes)
-
+  
   $container.isotope({
     itemSelector: '.content'
   });
 
-  $grid.imagesLoaded().progress( function() {
-  $grid.isotope('layout');
-  });
+  $container.imagesLoaded().progress( function() {
+    $container.isotope('layout');
+  });  
+
+
 
   var isotope = $container.data('isotope');
   function addEvenClasses() {
