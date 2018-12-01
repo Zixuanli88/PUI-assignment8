@@ -81,6 +81,10 @@ $(document).ready(function(){
     itemSelector: '.content'
   });
 
+  $grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+  });
+
   var isotope = $container.data('isotope');
   function addEvenClasses() {
     isotope.$filteredAtoms.each(function(i, elem) {
