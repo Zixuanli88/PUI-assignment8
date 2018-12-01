@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to choosw Infographic</title>
+	 <!-- jQuery -->
+    <script src="lib/jquery.js"></script>
+    <!-- handlebars -->
+    <script src="lib/handlebars-v4.0.11.js"></script>
+    <!-- custon JavaScript -->
+    <script src="main.js"></script>
+    <!-- custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- isotope library -->
+    <script src="http://isotope.metafizzy.co.s3-website-us-east-1.amazonaws.com/v1/jquery.isotope.min.js"></script>
+
+</head>
+<body>
+	<main>
+      <!-- Left screen -->
+ 	  <div class="box-left" id="left">
+       <div class="left-wrapper">
+	 	<!-- Header -->
+	 	<h1>How to Choose</h1>
+	 	<h2>Infographic</h2>
+	 	<p class = "header-text">Infographic is a powerful tool to communicate your idea information to others. Different types of graph can have different effects to your original information.  Use the filter below to choose the type will bring out the point you wish to make.</p>
+
+        <!-- Filter buttons -->
+	 	<h4>Add Your Filters</h4>
+	 	<div id = "filter-buttons">		
+			<input type="checkbox" name="buttonGroup" value=".compare" id="compare"><label for="compare"><span>Compare</span></label>
+			<input type="checkbox" name="buttonGroup" value=".hierarchy" id="hierarchy"><label for="hierarchy"><span>Hierarchy</span></label>
+			<input type="checkbox" name="buttonGroup" value=".growth" id="growth"><label for="growth"><span>Growth</span></label>
+			<input type="checkbox" name="buttonGroup" value=".timeline" id="timeline"><label for="timeline"><span>Timeline</span></label>
+			<input type="checkbox" name="buttonGroup" value=".rectangle" id="rectangle"><label for="rectangle"><span>Rectangle</span></label>	
+			<input class="check-button" type="checkbox" name="buttonGroup" value=".round" id="round"><label for="round"><span>Round</span></label>	
+			<input type="checkbox" name="buttonGroup" value=".intersection" id="intersection"><label for="intersection"><span>Intersection</span></label>
+	    </div>
+      </div>   
+     </div>
+
+        <!-- Right screen -->
+		 <div class="box-right" id="right">        
+           <ul class="dataviz-list-container"></ul>
+		   <script id="dataviz-template" type="text/x-handlebars-template">
+		  	{{#each dataviz}}  	
+			  	  	<li class="content {{Classes}}">
+			  	  		<p class="hashtag">#{{Classes}}</p>
+			  	  		<h3>{{Name}}</h3>
+			  	  		<img class="img" src = "{{Pic}}">
+			  	  		<P class="description">{{Description}}</P>
+			  	  	</li>
+		  	 {{/each}} 
+		  	</script>	     
+		 </div>
+	</main>
+
+	<footer>
+
+		
+	</footer>
+
+</body>
+
+
+</html>
